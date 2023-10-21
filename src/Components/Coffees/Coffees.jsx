@@ -6,15 +6,15 @@ const Coffees = () => {
 
     const [coffees, setCoffees] = useState([]);
 
+
     useEffect(() => {
         fetch('http://localhost:5000/coffee')
         .then(res => res.json())
         .then(data => setCoffees(data))
     },[])
 
-    const {_id} = coffees
 
-    
+
 
     return (
         <div className="grid grid-cols-2 gap-5">

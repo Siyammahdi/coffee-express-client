@@ -2,11 +2,12 @@ import PropTypes from 'prop-types'
 import { AiFillEye } from 'react-icons/Ai';
 import { HiPencil } from 'react-icons/Hi';
 import { MdDelete } from 'react-icons/Md';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const Coffee = ({ coffee }) => {
 
-    const {_id, name, chef, supplier, photoURL } = coffee;
+    const { _id, name, chef, supplier, photoURL } = coffee;
 
     const handleDelete = (_id) => {
         console.log(_id);
@@ -18,15 +19,25 @@ const Coffee = ({ coffee }) => {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, delete it!'
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-              Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
-              )
+
+                fetch(`http://localhost:5000/coffee/${_id}`, {
+                    method: 'DELETE',
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Coffee has been deleted successfully.',
+                                'success'
+                            )
+                        }
+                    })
             }
-          })
+        })
     }
 
 
@@ -39,9 +50,11 @@ const Coffee = ({ coffee }) => {
                 <p>Supplier: <span className='font-normal'>{supplier}</span></p>
             </div>
             <div className='flex flex-col space-y-2 mr-6'>
-                <button className='btn text-2xl bg-btn-bg text-white border-none '><AiFillEye></AiFillEye></button>
-                <button className='btn text-2xl bg-edit-btn text-white border-none'><HiPencil></HiPencil></button>
-                <button onClick={() => handleDelete(_id)} className='btn text-2xl bg-dlt-btn text-white border-none'><MdDelete></MdDelete></button>
+                <button className='btn text-2xl bg-btn-bg text-white border-none hover:bg-slate-400'><AiFillEye></AiFillEye></button>
+                <Link to="/updateCoffee">
+                    <button className='btn text-2xl bg-edit-btn text-white border-none hover:bg-slate-400'><HiPencil></HiPencil></button>
+                </Link>
+                <button onClick={() => handleDelete(_id)} className='btn text-2xl bg-dlt-btn text-white border-none hover:bg-slate-400'><MdDelete></MdDelete></button>
             </div>
 
         </div>
@@ -49,7 +62,8 @@ const Coffee = ({ coffee }) => {
 };
 
 Coffee.propTypes = {
-    coffee: PropTypes.object
+    coffee: PropTypes.object,
+
 }
 
 export default Coffee;

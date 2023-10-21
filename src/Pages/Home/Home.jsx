@@ -11,7 +11,7 @@ const Home = () => {
         <div className="">
             <Banner></Banner>
             <About></About>
-            <div className="bg-[url('src/assets/images/more/4.png')] bg-no-repeat bg-center bg-left">
+            <div className="bg-[url('src/assets/images/more/4.png')] bg-no-repeat bg-left">
                 <div className="bg-[url('src/assets/images/more/5.png')] bg-no-repeat bg-right">
                     <div className="text-center py-28 px-36">
                         <p>--- Sip & Savor ---</p>
