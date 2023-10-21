@@ -15,7 +15,9 @@ export default {
         'btn-text': '#242222',
         'primary-color': '#331A15',
         'card-bg': '#ECEAE3',
-        'block-btn-bg': '#D2B48C'
+        'block-btn-bg': '#D2B48C',
+        'edit-btn': '#3C393B',
+        'dlt-btn': '#EA4744',
       },
     },
   },
