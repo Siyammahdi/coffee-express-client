@@ -50,7 +50,9 @@ const Coffee = ({ coffee }) => {
                 <p>Supplier: <span className='font-normal'>{supplier}</span></p>
             </div>
             <div className='flex flex-col space-y-2 mr-6'>
-                <button className='btn text-2xl bg-btn-bg text-white border-none hover:bg-slate-400'><AiFillEye></AiFillEye></button>
+                <Link to={`coffeeDetails/${_id}`}>
+                    <button className='btn text-2xl bg-btn-bg text-white border-none hover:bg-slate-400'><AiFillEye></AiFillEye></button>
+                </Link>
                 <Link to={`updateCoffee/${_id}`}>
                     <button className='btn text-2xl bg-edit-btn text-white border-none hover:bg-slate-400'><HiPencil></HiPencil></button>
                 </Link>

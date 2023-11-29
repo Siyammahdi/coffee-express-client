@@ -8,7 +8,7 @@ const Banner = () => {
                     <div className="px-20 ml-96 text-left w-3/5">
                         <h1 className="mb-5 text-3xl text-white font-bold">Would you like a Cup of Delicious Coffee?</h1>
                         <p className="mb-5 text-xs font-sans">Its coffee time - Sip & Savor - Relaxation in every sip! Get the nostalgia back!! Your companion of every moment!!! Enjoy the beautiful moments and make them memorable.</p>
-                        <button className="btn normal-case text-xl rounded-none border-none bg-btn-bg text-btn-text hover:bg-transparent hover:text-white hover:outline-2 hover:outline-white">Learn More</button>
+                        <button  className="btn normal-case text-xl rounded-none bg-btn-bg text-btn-text hover:bg-transparent hover:text-white border-2 hover:border-white">Learn More</button>
                     </div>
                 </div>
             </div>

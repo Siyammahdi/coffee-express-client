@@ -44,6 +44,7 @@ const UpdateCoffee = () => {
                     icon: 'success',
                     confirmButtonText: 'Cool'
                   })
+                  navigate("/")
             }
         })
         .catch(error => {
