@@ -51,7 +51,7 @@ const Coffee = ({ coffee }) => {
             </div>
             <div className='flex flex-col space-y-2 mr-6'>
                 <button className='btn text-2xl bg-btn-bg text-white border-none hover:bg-slate-400'><AiFillEye></AiFillEye></button>
-                <Link to="/updateCoffee">
+                <Link to={`updateCoffee/${_id}`}>
                     <button className='btn text-2xl bg-edit-btn text-white border-none hover:bg-slate-400'><HiPencil></HiPencil></button>
                 </Link>
                 <button onClick={() => handleDelete(_id)} className='btn text-2xl bg-dlt-btn text-white border-none hover:bg-slate-400'><MdDelete></MdDelete></button>
