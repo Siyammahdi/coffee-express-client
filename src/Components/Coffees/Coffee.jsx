@@ -42,14 +42,14 @@ const Coffee = ({ coffee }) => {
 
 
     return (
-        <div className='bg-black bg-opacity-10 p-5 rounded-lg flex items-center justify-between'>
+        <div className='bg-black bg-opacity-10 p-5 rounded-lg flex flex-col lg:flex-row items-center justify-between'>
             <img className='w-32' src={photoURL} alt="nai" />
             <div className='text-left font-semibold'>
                 <p>Name: <span className='font-normal'>{name}</span></p>
                 <p>Chef; <span className='font-normal'>{chef}</span></p>
                 <p>Supplier: <span className='font-normal'>{supplier}</span></p>
             </div>
-            <div className='flex flex-col space-y-2 mr-6'>
+            <div className='flex flex-row lg:flex-col justify-center gap-2 lg:space-y-2 my-4 lg:my-0 lg:mr-6'>
                 <Link to={`coffeeDetails/${_id}`}>
                     <button className='btn text-2xl bg-btn-bg text-white border-none hover:bg-slate-400'><AiFillEye></AiFillEye></button>
                 </Link>

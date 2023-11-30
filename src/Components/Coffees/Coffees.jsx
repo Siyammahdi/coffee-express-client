@@ -17,7 +17,7 @@ const Coffees = () => {
 
 
     return (
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {
                 coffees.map(coffee => <Coffee key={coffee._id} coffee={coffee}></Coffee>)
             }

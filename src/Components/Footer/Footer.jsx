@@ -7,7 +7,7 @@ const Footer = () => {
         <div>
             <Contact></Contact>
             <div className="bg-[url('src/assets/images/more/24.jpg')] h-14 flex justify-center items-center">
-                <h4 className="text-white text-lg">Copyright Coffee Express ! All Rights Reserved</h4>
+                <h4 className="text-white text-sm lg:text-lg">Copyright Coffee Express ! All Rights Reserved</h4>
             </div>
         </div>
     );

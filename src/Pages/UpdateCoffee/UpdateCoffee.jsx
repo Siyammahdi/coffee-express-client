@@ -55,16 +55,16 @@ const UpdateCoffee = () => {
     }
 
     return (
-        <div className="my-32 text-center">
-            <div className="flex justify-start mt-10 font-rancho ml-36 my-10">
+        <div className="lg:my-32 text-center">
+            <div className="flex justify-start mt-10 font-rancho lg:ml-36 my-10">
                 <button onClick={handleBack} className="text-2xl text-primary-color flex items-center gap-2 font-semibold hover:bg-block-btn-bg px-2 py-4 rounded-lg"> <BsArrowLeftShort></BsArrowLeftShort> Back to home</button>
             </div>
-            <div className="bg-card-bg mx-36 py-20">
+            <div className="bg-card-bg lg:mx-36 py-8 lg:py-20">
                 <h1 className="text-3xl drop-shadow-xl font-semibold">Update Existing Coffee Details</h1>
-                <p className="font-sans w-3/4 m-auto my-10">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
+                <p className="font-sans w-3/4 m-auto lg:my-10">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
                 <form onSubmit={handleUpdateCoffee}>
-                    <div className="mx-28 font-sans font-semibold">
-                        <div className="grid grid-cols-2 grid-rows-3 gap-5 ">
+                    <div className="mx-4 lg:mx-28 font-sans font-semibold">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-3 gap-5 ">
                             <label>
                                 <h3 className="text-left my-2 text-lg">Name</h3>
                                 <input type="text" name="name" placeholder="Enter coffee name" className="input w-full" defaultValue={name} required />

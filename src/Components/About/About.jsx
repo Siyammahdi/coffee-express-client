@@ -2,7 +2,7 @@
 
 const About = () => {
     return (
-        <div className="bg-card-bg text-primary-color px-32 flex gap-10 py-10">
+        <div className="bg-card-bg text-primary-color px-16 lg:px-32 flex flex-col lg:flex-row  gap-10 py-10">
             <div>
                 <img src="/src/assets/images/icons/1.png" alt="" />
                 <h3 className="text-xl font-semibold">Awesome Aroma</h3>
