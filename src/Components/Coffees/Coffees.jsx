@@ -8,7 +8,7 @@ const Coffees = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/coffee')
+        fetch('https://coffee-express-server-ecru.vercel.app/coffee')
         .then(res => res.json())
         .then(data => setCoffees(data))
     },[])

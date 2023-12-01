@@ -22,7 +22,7 @@ const Coffee = ({ coffee }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/coffee/${_id}`, {
+                fetch(`https://coffee-express-server-ecru.vercel.app/coffee/${_id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())

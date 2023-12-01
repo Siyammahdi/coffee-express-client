@@ -27,7 +27,7 @@ const UpdateCoffee = () => {
         const updatedCoffee = {name, chef, supplier, taste, category, details, photoURL};
 
         //send data to server
-        fetch(`http://localhost:5000/coffee/${_id}`, {
+        fetch(`https://coffee-express-server-ecru.vercel.app/coffee/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type':'application/json'

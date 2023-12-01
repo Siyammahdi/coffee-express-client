@@ -26,7 +26,7 @@ const AddCoffee = () => {
         console.log(newCoffee);
 
         //send data to server
-        fetch("http://localhost:5000/coffee", {
+        fetch("https://coffee-express-server-ecru.vercel.app/coffee", {
             method: 'POST',
             headers: {
                 'content-type':'application/json'
@@ -51,7 +51,7 @@ const AddCoffee = () => {
 
     return (
         <div className="lg:my-32 text-center">
-            <div className="flex lg:justify-start mt-10 font-rancho lg:ml-36 ">
+            <div className="flex lg:justify-start lg:mt-10 font-rancho lg:ml-36 ">
                 <button onClick={handleBack} className="text-2xl text-primary-color flex items-center gap-2 font-semibold hover:bg-block-btn-bg px-2 py-4 rounded-lg duration-150"> <BsArrowLeftShort></BsArrowLeftShort> Back to home</button>
             </div>
             <div className="bg-card-bg lg:mx-36 py-8 lg:py-20 lg:my-10">
