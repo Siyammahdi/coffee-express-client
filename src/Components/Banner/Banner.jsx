@@ -1,9 +1,9 @@
-
+import BannerBg from "../../assets/images/more/3.png"
 
 const Banner = () => {
     return (
         <div>
-            <div className="hero min-h-screen" style={{ backgroundImage: 'url(src/assets/images/more/3.png)' }}>
+            <div className="hero min-h-screen" style={{ backgroundImage: `url(${BannerBg})` }}>
                 <div className="hero-content text-center text-neutral-content lg:justify-end">
                     <div className="lg:px-20 lg:ml-96 text-left w-3/5">
                         <h1 className="mb-5 text-2xl lg:text-3xl text-white font-bold">Would you like a Cup of Delicious Coffee?</h1>

@@ -1,19 +1,21 @@
 import { FaFacebookSquare, FaTwitter, FaInstagram, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa';
 import { HiPhone} from 'react-icons/Hi';
 import { MdEmail} from 'react-icons/Md';
+import logo1 from "../../assets/images/more/logo1.png"
+import ContactBg from "../../assets/images/more/13.jpg"
 
 const Contact = () => {
     return (
-        <div className="bg-[url('src/assets/images/more/13.jpg')] px-5 lg:px-32 leading-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-32 pt-8 lg:pt-28 pb-6">
+        <div className="px-5 lg:px-32 leading-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-32 pt-8 lg:pt-28 pb-6" style={{backgroundImage: `url(${ContactBg})`}}>
             <div className=''>
-                <img className='w-14 py-5' src="/src/assets/images/more/logo1.png" alt="" />
+                <img className='w-14 py-5' src={logo1} alt="" />
                 <h2 className="text-2xl font-semibold">Coffee Express</h2>
                 <p className="text-sm font-sans py-4">Always ready to be your friend. Come & Contact with us to share your memorable moments, to share with your best companion.</p>
                 <div className='flex gap-3 text-4xl text-primary-color'>
                     <FaFacebookSquare></FaFacebookSquare>
                     <FaTwitter></FaTwitter>
                     <FaInstagram></FaInstagram>
-                    <FaLinkedin></FaLinkedin>
+                    <FaLinkedin></FaLinkedin> 
                 </div>
                 <h2 className='text-2xl font-semibold py-5'>Get in Touch</h2>
                 <div>
